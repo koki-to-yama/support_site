@@ -53,7 +53,7 @@
         </ol>
 
         <div class="notice">
-          <strong>🔒 安全性について：</strong> APIキーはあなたのデバイス内（iPhone内）に安全に保存され、外部には送信されません。iOS Keychainという高度なセキュリティ技術で保護されています。
+          <strong>🔒 安全性について：</strong> APIキーはあなたのiPhone内に安全に保存され、外部には送信されません。
         </div>
 
         <h3>ステップ2: 目標を設定する</h3>
@@ -231,66 +231,43 @@
       </section>
 
       <section>
-        <h2>技術仕様</h2>
+        <h2>動作環境</h2>
         <ul>
-          <li><strong>対応OS:</strong> iOS 13.0以上</li>
-          <li><strong>開発環境:</strong> React Native / Expo</li>
-          <li><strong>画像解析:</strong> Google Gemini API (gemini-2.5-flash)</li>
-          <li><strong>データ保存:</strong> デバイスローカルストレージ（AsyncStorage）</li>
-          <li><strong>セキュリティ:</strong> APIキーはiOS Keychainに安全に保存</li>
+          <li><strong>対応機種:</strong> iOS 13.0以上のiPhone</li>
+          <li><strong>画像解析:</strong> Google AI（Gemini）を使用</li>
+          <li><strong>データ保存:</strong> すべてあなたのiPhone内に保存</li>
+          <li><strong>セキュリティ:</strong> APIキーはiPhoneの安全な保存領域で保護</li>
         </ul>
       </section>
 
       <section>
         <h2>プライバシーとセキュリティ</h2>
         <ul>
-          <li>すべてのデータ（食事記録、体重、目標設定）はデバイス内にのみ保存されます</li>
-          <li>写真は解析時のみGemini APIに送信され、当社では保存しません</li>
-          <li>APIキーはiOS Keychainに暗号化して保存されます</li>
+          <li>すべてのデータ（食事記録、体重、目標設定）はあなたのiPhone内にのみ保存されます</li>
+          <li>写真は解析時のみGoogle AIに送信され、当社では保存しません</li>
+          <li>APIキーはiPhoneの安全な保存領域に暗号化して保存されます</li>
           <li>個人情報を第三者に提供することはありません</li>
         </ul>
       </section>
 
       <section>
-        <h2>既知の問題</h2>
+        <h2>ご利用時の注意点</h2>
         <ul>
-          <li>複数の料理が写っている写真では、解析精度が低下する場合があります</li>
-          <li>Gemini APIのレート制限（2025年10月時点：15リクエスト/分、1500リクエスト/日）に達すると、一時的に解析できなくなります</li>
+          <li>複数の料理が写っている写真では、解析の精度が下がる場合があります（個別に撮影することをおすすめします）</li>
+          <li>短時間に連続して解析すると、一時的に利用できなくなることがあります（無料枠の制限のため）</li>
         </ul>
         <div class="notice">
-          <strong>📝 お知らせ：</strong> 上記の制限値はGoogle Gemini APIの現時点での仕様です。今後変更される可能性があります。
+          <strong>💡 ヒント：</strong> 1分間に15回、1日1500回まで無料で解析できます（2025年10月時点）。通常の利用では十分な回数です。
         </div>
-      </section>
-
-      <section>
-        <h2>今後の予定機能</h2>
-        <ul>
-          <li>データのクラウドバックアップ</li>
-          <li>週次・月次のレポート機能</li>
-          <li>食品データベースからの検索機能</li>
-          <li>複数の食事パターンのテンプレート保存</li>
-          <li>Apple Healthとの連携</li>
-        </ul>
       </section>
 
       <div class="contact-info">
         <h2>お問い合わせ</h2>
-        <p>上記のFAQで解決しない場合や、その他のご質問、バグ報告、機能リクエストなどは、以下のメールアドレスまでお気軽にお問い合わせください。</p>
+        <p>ご質問やご不明な点がございましたら、お気軽にお問い合わせください。</p>
         <p><strong>Email:</strong> <a href="mailto:support@toyamako.work">support@toyamako.work</a></p>
-
-        <h3>お問い合わせの際には、以下の情報を含めていただけるとスムーズです</h3>
-        <ul>
-          <li>お使いのデバイス（iPhone のモデル名）</li>
-          <li>iOSのバージョン</li>
-          <li>アプリのバージョン（設定画面で確認できます）</li>
-          <li>発生している問題の詳細</li>
-          <li>問題が発生した際の操作手順</li>
-          <li>スクリーンショット（可能であれば）</li>
-        </ul>
-
-        <div class="notice">
-          <strong>対応時間:</strong> お問い合わせは24時間受け付けておりますが、返信には数日かかる場合がございます。予めご了承ください。
-        </div>
+        <p style="font-size: 14px; color: #666; margin-top: 10px;">
+          お問い合わせの際は、発生している問題の内容をできるだけ詳しくお書きください。返信には数日かかる場合がございます。
+        </p>
       </div>
 
       <a href="terms.html" class="back-link">利用規約を見る</a>
