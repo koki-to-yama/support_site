@@ -26,20 +26,42 @@
         <h3>ステップ1: 無料APIキーを取得する（初回のみ・5分で完了）</h3>
         <p>写真から栄養素を自動解析するために、Google Gemini APIキーが必要です。<strong>完全無料で取得できます。</strong></p>
 
+        <div class="notice" style="background-color: #e3f2fd; border-left: 4px solid #2196f3; margin-bottom: 20px;">
+          <strong>💳 クレジットカード登録は不要です！</strong><br>
+          無料枠のみを使用する場合、クレジットカードや支払い情報の登録は一切不要です。もし登録を求められても、スキップして問題ありません。
+        </div>
+
         <ol>
           <li><strong>Google AI Studioにアクセス</strong>
             <ul>
               <li><a href="https://aistudio.google.com/apikey" target="_blank">こちらのリンク</a>をタップしてください</li>
               <li>Googleアカウントでログインします（Gmailアドレスがあれば誰でもOK）</li>
+              <li>初回は利用規約への同意を求められるので、内容を確認して「Agree」または「同意する」をタップ</li>
             </ul>
           </li>
 
-          <li><strong>APIキーを作成</strong>
+          <li><strong>APIキーを作成（課金なし設定を確認）</strong>
             <ul>
               <li>「Create API Key」または「APIキーを作成」ボタンをタップ</li>
-              <li>表示されたAPIキー（長い英数字の文字列）をコピーします</li>
+              <li><strong>⚠️ 重要：</strong> 「Create API key in new project」（新規プロジェクトでAPIキーを作成）を選択してください</li>
+              <li>表示されたAPIキー（長い英数字の文字列、例：<code style="font-size: 12px;">AIzaSyA...</code>）をコピーします</li>
               <li><em>このキーは後で確認できるので、焦らなくてOKです</em></li>
             </ul>
+          </li>
+
+          <li><strong>✅ 課金されない設定の確認（必須）</strong>
+            <ul>
+              <li><strong>確認方法：</strong> Google AI Studioの画面で、以下を確認してください</li>
+              <li>✓ 「Free tier」または「無料枠」と表示されている</li>
+              <li>✓ 「Billing account」や「支払い方法」の設定画面が表示されていない</li>
+              <li>✓ クレジットカード情報を入力していない</li>
+            </ul>
+            <div class="notice" style="background-color: #fff3e0; border-left: 4px solid #ff9800; margin-top: 10px;">
+              <strong>⚠️ もし「Billing account」や「支払い方法」の設定を求められたら：</strong><br>
+              • <strong>設定しないでください！</strong> 無料枠のみ使用する場合は不要です<br>
+              • スキップまたはキャンセルして、APIキーのみを使用してください<br>
+              • 支払い方法を設定すると、将来的に課金される可能性があります
+            </div>
           </li>
 
           <li><strong>CALOGアプリに設定</strong>
@@ -47,10 +69,19 @@
               <li>CALOGアプリを開く</li>
               <li>下部メニューから「設定」（⚙️アイコン）をタップ</li>
               <li>「APIキー設定」をタップ</li>
-              <li>コピーしたAPIキーを貼り付けて「保存」</li>
+              <li>コピーしたAPIキー（<code style="font-size: 12px;">AIzaSyA...</code>で始まる長い文字列）を貼り付けて「保存」</li>
+              <li>正しく設定できると、ホーム画面で「📷 写真を撮る」が使えるようになります</li>
             </ul>
           </li>
         </ol>
+
+        <div class="notice" style="background-color: #e8f5e9; border-left: 4px solid #4caf50; margin-top: 20px;">
+          <strong>✅ 課金されないことを再確認：</strong><br>
+          • クレジットカードを登録していない → ✅ 課金されません<br>
+          • 無料枠（1日1,500回まで）のみ使用 → ✅ 課金されません<br>
+          • 無料枠を超えた場合 → ⚠️ 解析が一時的に使えなくなるだけ（自動課金されません）<br>
+          • 手動入力は常に使用可能 → ✅ API不要で記録できます
+        </div>
 
         <div class="notice">
           <strong>🔒 安全性について：</strong> APIキーはあなたのiPhone内に安全に保存され、外部には送信されません。
@@ -81,15 +112,25 @@
         </div>
 
         <h3>🆓 無料で使える範囲は？</h3>
-        <p>Google Gemini APIの無料枠（2025年10月時点）：</p>
+        <p>Google Gemini APIの無料枠（2025年1月時点）：</p>
+
+        <p><strong>推奨：Gemini 2.5 Flash（デフォルト設定）</strong></p>
         <ul>
-          <li><strong>1日最大1,500回</strong>のリクエスト（通常の使用では十分すぎる量です）</li>
-          <li><strong>1分間に15回</strong>まで解析可能</li>
+          <li><strong>1日最大250回</strong>のリクエスト</li>
+          <li><strong>1分間に10回</strong>まで解析可能</li>
           <li><strong>制限に達した場合</strong>は、少し待つか、手動入力で記録できます</li>
         </ul>
-        <p><em>※ 1日3食×30日=90回程度の使用が一般的なので、無料枠で十分カバーできます。</em></p>
+        <p><em>※ 1日3食×30日=90回程度の使用が一般的なので、無料枠（250回/日）で十分カバーできます。</em></p>
+
+        <p><strong>参考：Gemini 2.5 Pro（高精度モデル）</strong></p>
+        <ul>
+          <li><strong>1日最大50回</strong>のリクエスト</li>
+          <li><strong>1分間に2回</strong>まで解析可能</li>
+          <li>より高精度な解析が可能ですが、制限が厳しいため通常使用には非推奨</li>
+        </ul>
+
         <div class="notice" style="background-color: #fff3e0; border-left: 4px solid #ff9800;">
-          <strong>⚠️ 重要：</strong> 無料枠やレート制限はGoogleの仕様変更により今後変わる可能性があります。最新情報は<a href="https://ai.google.dev/pricing" target="_blank">Google AI Studio</a>でご確認ください。
+          <strong>⚠️ 重要：</strong> 無料枠やレート制限はGoogleの仕様変更により今後変わる可能性があります。最新情報は<a href="https://ai.google.dev/gemini-api/docs/rate-limits" target="_blank">Google AI 公式ドキュメント</a>でご確認ください。
         </div>
       </section>
 
@@ -114,18 +155,41 @@
         </ul>
 
         <h3>Q3. 料金はかかりますか？完全無料で使えますか？</h3>
-        <p><strong>はい、完全無料で使えます！（2025年10月時点）</strong></p>
+        <p><strong>はい、完全無料で使えます！（2025年1月時点）</strong></p>
         <ul>
           <li>CALOGアプリ自体は<strong>完全無料</strong>です</li>
-          <li>Google Gemini APIも<strong>無料枠</strong>があり、毎日の食事記録に十分な量（1日1,500回まで）を無料でご利用いただけます</li>
+          <li>Google Gemini APIも<strong>無料枠</strong>があり、毎日の食事記録に十分な量（Flash: 1日250回、Pro: 1日50回）を無料でご利用いただけます</li>
           <li>クレジットカード登録も不要です</li>
           <li>課金や広告は一切ありません</li>
         </ul>
+
+        <p><strong>📌 課金されないための確認ポイント：</strong></p>
+        <ol>
+          <li><strong>Google AI StudioでAPIキー取得時：</strong>
+            <ul>
+              <li>✅ 「Create API key in new project」を選択</li>
+              <li>✅ クレジットカード情報を入力しない</li>
+              <li>✅ 「Billing account」や「支払い方法」を設定しない</li>
+              <li>✅ 「Free tier」または「無料枠」が表示されていることを確認</li>
+            </ul>
+          </li>
+          <li><strong>使用中：</strong>
+            <ul>
+              <li>✅ 1日250回までの解析（通常の食事記録では十分）</li>
+              <li>✅ 無料枠を超えても自動課金されない（解析が一時的に使えなくなるだけ）</li>
+              <li>✅ 手動入力は常に使用可能（API不要）</li>
+            </ul>
+          </li>
+        </ol>
+
         <div class="notice" style="background-color: #e8f5e9; border-left: 4px solid #4caf50;">
-          <strong>安心してお使いください：</strong> 追加料金が発生することはありません。無料枠を超えた場合も、自動課金されることはなく、単に解析機能が一時的に使えなくなるだけです（手動入力は可能）。
+          <strong>✅ 安心してお使いください：</strong><br>
+          • クレジットカードを登録していなければ、絶対に課金されません<br>
+          • 無料枠を超えた場合も、自動課金されることはなく、単に解析機能が一時的に使えなくなるだけです<br>
+          • 手動入力は常に使用可能です
         </div>
         <div class="notice" style="background-color: #fff3e0; border-left: 4px solid #ff9800; margin-top: 10px;">
-          <strong>⚠️ 注意：</strong> Google Gemini APIの無料枠は将来変更される可能性があります。最新情報は<a href="https://ai.google.dev/pricing" target="_blank">Google AI公式サイト</a>でご確認ください。
+          <strong>⚠️ 注意：</strong> Google Gemini APIの無料枠は将来変更される可能性があります。最新情報は<a href="https://ai.google.dev/gemini-api/docs/rate-limits" target="_blank">Google AI 公式ドキュメント</a>でご確認ください。
         </div>
 
         <h3>Q4. APIキーの設定方法は？</h3>
