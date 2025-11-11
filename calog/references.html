@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>参考文献・情報源 | CALOG - AI食事記録</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #FF9800;
+            font-size: 28px;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #FF9800;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #FF9800;
+            font-size: 22px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #FF9800;
+            padding-left: 12px;
+        }
+        h3 {
+            color: #666;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p, li {
+            color: #555;
+            font-size: 16px;
+        }
+        ul {
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        a {
+            color: #FF9800;
+            text-decoration: none;
+            word-break: break-all;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .disclaimer {
+            background-color: #fff3e0;
+            border-left: 4px solid #FF9800;
+            padding: 15px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        .disclaimer strong {
+            color: #E65100;
+        }
+        .section {
+            margin-bottom: 35px;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+        .citation {
+            background-color: #f5f5f5;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .note {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 参考文献・情報源</h1>
+        <p>CALOGアプリの栄養計算と推奨値は、以下の科学的根拠および公的機関の基準に基づいています。</p>
+
+        <div class="section">
+            <h2>🍽️ カロリー計算の根拠</h2>
+
+            <h3>1. 厚生労働省「日本人の食事摂取基準（2025年版）」</h3>
+            <p>日本における栄養素の摂取基準を定めた公的文書。年齢、性別、身体活動レベルに応じた推奨エネルギー量を提供。</p>
+            <ul>
+                <li>📖 <a href="https://www.mhlw.go.jp/stf/newpage_44138.html" target="_blank">日本人の食事摂取基準（2025年版）策定検討会報告書</a></li>
+                <li>📅 公表: 2024年10月11日（2025年〜2029年使用）</li>
+            </ul>
+
+            <h3>2. 文部科学省「日本食品標準成分表（八訂）追補2023年」</h3>
+            <p>日本の食品に含まれる栄養成分の公的データベース。AI解析の参考データソース。</p>
+            <ul>
+                <li>📊 <a href="https://www.mext.go.jp/a_menu/syokuhinseibun/" target="_blank">日本食品標準成分表</a></li>
+            </ul>
+
+            <h3>3. FAO/WHO/UNU「Human Energy Requirements (2001)」</h3>
+            <p>国連食糧農業機関、世界保健機関、国連大学による合同専門家会議報告書。エネルギー必要量と身体活動レベル（PAL）の科学的根拠。</p>
+            <ul>
+                <li>🌍 <a href="https://www.fao.org/4/y5686e/y5686e00.htm" target="_blank">Human energy requirements - FAO</a></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🥗 栄養素の推奨値</h2>
+
+            <h3>WHO（世界保健機関）「健康的な食事」</h3>
+            <p>国際的な栄養ガイドライン。</p>
+            <ul>
+                <li>🌍 <a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank">WHO - Healthy diet</a></li>
+                <li>主な推奨: 脂質は総エネルギーの30%未満、飽和脂肪酸は10%未満</li>
+            </ul>
+
+            <h3>農林水産省「食事バランスガイド」</h3>
+            <p>健康的な食事のバランスを視覚的に示したガイド。</p>
+            <ul>
+                <li>🌾 <a href="https://www.maff.go.jp/j/balance_guide/" target="_blank">食事バランスガイド</a></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>⚙️ 本アプリで使用している計算方法</h2>
+
+            <h3>基礎代謝量（BMR）の計算式</h3>
+            <p><strong>Mifflin-St Jeor Equation（ミフリン-セントジョー式）</strong>を使用しています。</p>
+
+            <p><strong>計算式:</strong></p>
+            <ul>
+                <li><strong>男性:</strong> BMR = 10 × 体重(kg) + 6.25 × 身長(cm) − 5 × 年齢(歳) + 5</li>
+                <li><strong>女性:</strong> BMR = 10 × 体重(kg) + 6.25 × 身長(cm) − 5 × 年齢(歳) − 161</li>
+            </ul>
+
+            <div class="citation">
+                <strong>📄 出典:</strong><br>
+                Mifflin MD, St Jeor ST, Hill LA, Scott BJ, Daugherty SA, Koh YO. <br>
+                "A new predictive equation for resting energy expenditure in healthy individuals."<br>
+                <em>Am J Clin Nutr.</em> 1990;51(2):241-247. <br>
+                PubMed ID: 2305711 | DOI: 10.1093/ajcn/51.2.241
+            </div>
+
+            <h3>総消費カロリー（TDEE）の計算</h3>
+            <p>BMRに身体活動レベル係数を掛けて、1日の総消費カロリーを算出します。</p>
+
+            <p><strong>身体活動レベル係数（一般的に使用される値）:</strong></p>
+            <ul>
+                <li><strong>ほとんど運動しない:</strong> BMR × 1.2</li>
+                <li><strong>軽い運動（週1-3回）:</strong> BMR × 1.375</li>
+                <li><strong>中程度の運動（週3-5回）:</strong> BMR × 1.55</li>
+                <li><strong>激しい運動（週6-7回）:</strong> BMR × 1.725</li>
+                <li><strong>非常に激しい運動:</strong> BMR × 1.9</li>
+            </ul>
+
+            <div class="note">
+                <strong>📌 注記:</strong><br>
+                これらの係数値（1.2, 1.375, 1.55, 1.725, 1.9）は、栄養計算ツールで広く使用されている標準的な近似値ですが、単一の科学論文に由来するものではありません。<br>
+                科学的根拠は、FAO/WHO/UNU (2001)の身体活動レベル（PAL: Physical Activity Level）の範囲値（1.40-2.40）に基づいており、本アプリの係数もこの範囲内に収まっています。
+            </div>
+
+            <h3>PFC（タンパク質・脂質・炭水化物）バランス</h3>
+            <p>本アプリでは、目標体型に応じて以下のバランスを推奨しています：</p>
+            <ul>
+                <li><strong>スリム型:</strong> タンパク質 25% / 脂質 20% / 炭水化物 55%</li>
+                <li><strong>バランス型:</strong> タンパク質 30% / 脂質 25% / 炭水化物 45%</li>
+                <li><strong>マッスル型:</strong> タンパク質 35% / 脂質 25% / 炭水化物 40%</li>
+            </ul>
+
+            <div class="note">
+                <strong>📌 注記:</strong><br>
+                これらのバランスは、厚生労働省「日本人の食事摂取基準（2025年版）」およびWHOガイドラインの推奨範囲内で設定されています。個人の健康状態や目標に応じて調整が必要な場合があります。
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🤖 AI技術について</h2>
+            <p>本アプリは食品画像認識に生成AI技術を使用していますが、AI技術は参考情報として利用しています:</p>
+            <ul>
+                <li><strong>AI解析の精度:</strong> 食品の種類、調理方法、量によって精度が変動します</li>
+                <li><strong>推定値の性質:</strong> AIが提供する栄養値は推定値であり、実測値ではありません</li>
+                <li><strong>ユーザーの役割:</strong> 結果を確認し、必要に応じて手動で修正することを推奨します</li>
+            </ul>
+        </div>
+
+        <div class="disclaimer">
+            <h3><strong>⚠️ 免責事項（Medical Disclaimer）</strong></h3>
+            <p><strong>本アプリは医療機器ではありません。</strong></p>
+            <p>CALOGはAI技術を用いた栄養素の推定値を提供する健康管理支援ツールであり、医学的な診断、治療、または医療アドバイスを目的としたものではありません。</p>
+            <ul>
+                <li>✅ 健康的な食事管理の<strong>参考情報</strong>として使用できます</li>
+                <li>❌ 医学的診断や治療の代替としては使用できません</li>
+                <li>⚕️ 健康上の懸念、既往症、特定の食事制限がある場合は、必ず医師、管理栄養士、または医療専門家にご相談ください</li>
+                <li>🩺 糖尿病、腎臓病、心臓病などの疾患をお持ちの方は、食事管理について主治医の指示に従ってください</li>
+                <li>🏥 本アプリの栄養計算は一般的な健康な成人を対象としており、妊娠中・授乳中の方、アスリート、医学的管理が必要な方には適さない場合があります</li>
+            </ul>
+            <p><strong>本アプリの使用により生じたいかなる損害についても、開発者は責任を負いかねます。</strong></p>
+        </div>
+
+        <div class="section">
+            <h2>📞 お問い合わせ</h2>
+            <p>参考文献や計算方法に関するご質問は、<a href="support.html">サポートページ</a>からお問い合わせください。</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Yamako. All rights reserved.</p>
+            <p>最終更新日: 2025年11月10日</p>
+            <p><a href="terms.html">利用規約</a> | <a href="privacy.html">プライバシーポリシー</a> | <a href="support.html">サポート</a></p>
+        </div>
+    </div>
+</body>
+</html>
